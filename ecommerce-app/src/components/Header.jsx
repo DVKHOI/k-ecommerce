@@ -8,7 +8,10 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-6">
-              <p className="text-white mb-0">Free shipping</p>
+              <p className="text-white mb-0">
+                {" "}
+                Free Shipping Over $100 & Free Returns
+              </p>
             </div>
             <div className="col-6">
               <p className="text-end text-white mb-0">
@@ -30,7 +33,7 @@ const Header = () => {
               </h1>
             </div>
             <div className="col-5">
-              <div class="input-group ">
+              <div className="input-group ">
                 <input
                   type="text"
                   className="form-control p-2"
@@ -124,7 +127,7 @@ const Header = () => {
                 </div>
                 <div className="menu-links d-flex gap-15 ">
                   <NavLink to="/">Home</NavLink>
-                  <NavLink to="/">Our Store</NavLink>
+                  <NavLink to="/our-store">Our Store</NavLink>
                   <NavLink to="/">Blogs</NavLink>
                   <NavLink to="/contact">Contact</NavLink>
                 </div>
