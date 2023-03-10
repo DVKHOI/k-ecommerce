@@ -86,7 +86,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <header className="header-bottom py-3">
+      <header className="header-bottom py-3 sticky-top">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -127,8 +127,8 @@ const Header = () => {
                 </div>
                 <div className="menu-links d-flex gap-15 ">
                   <NavLink to="/">Home</NavLink>
-                  <NavLink to="/our-store">Our Store</NavLink>
-                  <NavLink to="/">Blogs</NavLink>
+                  <NavLink to="/store">Our Store</NavLink>
+                  <NavLink to="/blog">Blogs</NavLink>
                   <NavLink to="/contact">Contact</NavLink>
                 </div>
               </div>
