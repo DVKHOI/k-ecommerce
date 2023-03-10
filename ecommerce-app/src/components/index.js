@@ -4,3 +4,6 @@ export const { default: Footer } = require("./Footer");
 export const { default: BlogCart } = require("./BlogCart");
 export const { default: ProductCard } = require("./ProductCard");
 export const { default: SpecialProduct } = require("./SpecialProduct");
+export const { default: BreadCrumb } = require("./BreadCrumb");
+export const { default: Meta } = require("./Meta");
+export const { default: Color } = require("./Color");
