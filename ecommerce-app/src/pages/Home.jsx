@@ -20,7 +20,7 @@ const Home = () => {
                   <h4>SUPERCHARGED FOR PROS.</h4>
                   <h5>iPad S13+ Pro.</h5>
                   <p>From $999.00 or $41.62/mo</p>
-                  <Link className="button mt-3">BUY NOW</Link>
+                  <Link className="button mt-3 d-inline-block">BUY NOW</Link>
                 </div>
               </div>
             </div>

@@ -11,9 +11,7 @@ const ProductCart = ({ grid }) => {
   const location = useLocation();
   return (
     <div
-      className={`${
-        location.pathname === "/our-store" ? `gr-${grid}` : "col-3"
-      }`}
+      className={`${location.pathname === "/store" ? `gr-${grid}` : "col-3"}`}
     >
       <div className="product-cart position-relative">
         <div className="wishlist-icon position-absolute">
@@ -27,7 +25,7 @@ const ProductCart = ({ grid }) => {
         </div>
         <div className={`product-details ${grid === 12 ? "me-5" : ""}`}>
           <p className="brand">Havels</p>
-          <Link to="/" className="product-title">
+          <Link to="/product-detail/:slug" className="product-title">
             Kids headphones bulk 10 pack multi colored for students
           </Link>
           <p className={`desc ${grid === 12 ? "" : "d-none"}`}>
@@ -36,13 +34,7 @@ const ProductCart = ({ grid }) => {
             maxime. Fugit excepturi odit vitae minima veniam impedit et eum
             alias neque.
           </p>
-          <ReactStars
-            count={5}
-            value={3}
-            size={24}
-            edit={"true"}
-            activeColor="#ffd700"
-          />
+          <ReactStars count={5} value={3} size={24} activeColor="#ffd700" />
           <p className="product-price">$100.00</p>
         </div>
         <div className="actions-bar position-absolute">

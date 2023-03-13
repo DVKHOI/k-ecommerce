@@ -13,13 +13,13 @@ const Contact = () => {
             <div className="col-12">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18591.073285768478!2d75.58567703291092!3d11.602539090486607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x816d1ae38628386a!2sOrange%20Super%20Shoppee!5e0!3m2!1sen!2sin!4v1671463596597!5m2!1sen!2sin"
-                width="600"
-                height="450"
+                width={600}
+                height={450}
                 className="border-0 w-100"
-                allowFullscreen=""
+                allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              />
             </div>
             <div className="col-12 mt-5">
               <div className="contact-inner-wrapper d-flex justify-content-between">
