@@ -7,3 +7,7 @@ export const { default: SpecialProduct } = require("./SpecialProduct");
 export const { default: BreadCrumb } = require("./BreadCrumb");
 export const { default: Meta } = require("./Meta");
 export const { default: Color } = require("./Color");
+export const { default: Wishlist } = require("./Wishlist");
+export const { default: CompareProduct } = require("./CompareProduct");
+export const { default: CustomInput } = require("./CustomInput");
+export const { default: ProductCart } = require("./ProductCart");

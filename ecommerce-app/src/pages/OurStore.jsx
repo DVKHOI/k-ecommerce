@@ -3,7 +3,6 @@ import { BreadCrumb, Color, Meta, ProductCard } from "../components";
 import ReactStars from "react-rating-stars-component";
 const OurStore = () => {
   const [grid, setGrid] = useState(4);
-  console.log("🚀 ~ file: OurStore.jsx:6 ~ OurStore ~ grid:", grid);
   return (
     <>
       <Meta title="Our Store" />

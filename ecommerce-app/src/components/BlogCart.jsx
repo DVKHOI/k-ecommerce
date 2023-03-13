@@ -17,7 +17,7 @@ const BlogCart = ({ col }) => {
             placeat laudantium temporibus beatae? Quis magnam molestiae rem modi
             magni rerum.
           </p>
-          <Link to="/" className="button">
+          <Link to="/blog/:slug" className="button">
             Read more
           </Link>
         </div>
