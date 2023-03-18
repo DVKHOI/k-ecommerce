@@ -1,0 +1,13 @@
+export const { default: AddBlog } = require("./BLog/AddBlog");
+export const { default: BlogList } = require("./BLog/BlogList");
+export const { default: AddBlogCat } = require("./BLog/AddBlogCat");
+export const { default: BlogCatList } = require("./BLog/BlogCatList");
+export const { default: Order } = require("./Orders/Orders");
+export const { default: AddColor } = require("./Color/AddColor");
+export const { default: ColorList } = require("./Color/ColorList");
+export const { default: AddCategory } = require("./Category/AddCategory");
+export const { default: CategoryList } = require("./Category/CategoryList");
+export const { default: AddBrand } = require("./Brand/AddBrand");
+export const { default: BrandList } = require("./Brand/BrandList");
+export const { default: AddProduct } = require("./Products/AddProduct");
+export const { default: ProductList } = require("./Products/ProductList");
