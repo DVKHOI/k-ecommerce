@@ -65,10 +65,10 @@ const AddBrand = () => {
       } else {
         dispatch(createBrand(values));
         formik.resetForm();
-        // setTimeout(() => {
-        //   dispatch(resetState());
-        //   navigate("/admin/list-brand");
-        // }, 300);
+        setTimeout(() => {
+          dispatch(resetState());
+          navigate("/admin/list-brand");
+        }, 300);
       }
     },
   });
