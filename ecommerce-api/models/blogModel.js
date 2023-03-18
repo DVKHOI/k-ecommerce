@@ -1,65 +1,58 @@
-const mongoose = require("mongoose"); // Erase if already required
+const mongoose = require('mongoose'); // Erase if already required
 
 // Declare the Schema of the Mongo model
-var blogSchema = new mongoose.Schema(
-  {
-    title: {
-      type: String,
-      required: true,
+var blogSchema = new mongoose.Schema({
+    title:{
+        type:String,
+        required:true,
+        
     },
-    description: {
-      type: String,
-      required: true,
+    description:{
+        type:String,
+        required:true,
+       
     },
-    category: {
-      type: String,
-      required: true,
+    category:{
+        type:String,
+        required:true,
+        
     },
-    numViews: {
-      type: Number,
-      default: 0,
+    numViews:{
+        type:Number,
+        default:0,
     },
-    isLiked: {
-      type: Boolean,
-      default: false,
+    isLiked:{
+        type:Boolean,
+        default:false
     },
-    isDisliked: {
-      type: Boolean,
-      default: false,
+    isDisliked:{
+        type:Boolean,
+        default:false
     },
-    likes: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-      },
-    ],
-    dislikes: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-      },
-    ],
-    image: {
-      type: String,
-      default:
-        "https://tse2.mm.bing.net/th?id=OIP.a5YOm_1N-oe-O025Jw4PTQHaE8&pid=Api&P=0",
+    likes:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"User",
+    }],
+    dislikes:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"User",
+    }],
+    image:{
+        type:String,
+        default:"https://www.shutterstock.com/image-photo/bloggingblog-concepts-ideas-white-worktable-260nw-1029506242.jpg"
     },
-    author: {
-      type: String,
-      default: "Admin",
+    author:{
+        type:String,
+        default:"Admin"
+    },images:[]
+},{
+    toJSON:{
+        virtuals:true,
+    },toObject:{
+        virtuals:true,
     },
-    images: [],
-  },
-  {
-    toJSON: {
-      virtuals: true,
-    },
-    toObject: {
-      virtuals: true,
-    },
-    timestamps: true,
-  }
-);
+    timestamps:true
+});
 
 //Export the model
-module.exports = mongoose.model("Blog", blogSchema);
+module.exports = mongoose.model('Blog', blogSchema);

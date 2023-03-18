@@ -1,19 +1,12 @@
-const express = require("express");
-const {
-  createBlogCat,
-  updateBlogCat,
-  deleteBlogCat,
-  getBlogCat,
-  getAllBlogCat,
-} = require("../controllers/blogCatCtrl");
+const express=require('express');
+const { createCategory, updateCategory, deleteCategory, getCategory, getallCategory } = require('../controller/blogCatCtrl');
+const { authMiddleware, isAdmin } = require('../middlewares/AuthMiddleware');
+const router=express.Router();
 
-const router = express.Router();
-const { authMiddleware, isAdmin } = require("../middlewares/authMiddleware");
 
-router.post("/", authMiddleware, isAdmin, createBlogCat);
-router.put("/:id", authMiddleware, isAdmin, updateBlogCat);
-router.delete("/:id", authMiddleware, isAdmin, deleteBlogCat);
-router.get("/:id", authMiddleware, isAdmin, getBlogCat);
-router.get("/", authMiddleware, isAdmin, getAllBlogCat);
-
-module.exports = router;
+router.post('/',authMiddleware,isAdmin,createCategory)
+router.put('/:id',authMiddleware,isAdmin,updateCategory)
+router.delete('/:id',authMiddleware,isAdmin,deleteCategory)
+router.get('/:id',getCategory)
+router.get('/',getallCategory)
+module.exports=router

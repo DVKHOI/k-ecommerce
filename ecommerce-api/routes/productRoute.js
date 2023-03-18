@@ -1,27 +1,15 @@
-const express = require("express");
-const {
-  createProduct,
-  getProduct,
-  getAllProducts,
-  updateProduct,
-  deleteProduct,
-  addToWishlist,
-  rating,
-  uploadImages,
-} = require("../controllers/productCtrl");
-const { isAdmin, authMiddleware } = require("../middlewares/authMiddleware");
-const {
-  uploadPhoto,
-  productImgResize,
-} = require("../middlewares/uploadImages");
-const router = express.Router();
+const express=require('express');
+const { createProduct, getaProduct, getAllProduct, updateProduct, deleteProduct, AddtoWishlist, rating } = require('../controller/productCtrl');
+const {isAdmin,authMiddleware} =require('../middlewares/authMiddleware');
+const router=express.Router();
 
-router.post("/", authMiddleware, isAdmin, createProduct);
-router.put("/wishlist", authMiddleware, addToWishlist);
-router.put("/rating", authMiddleware, rating);
-router.put("/:id", authMiddleware, isAdmin, updateProduct);
-router.delete("/:id", authMiddleware, isAdmin, deleteProduct);
-router.get("/:id", getProduct);
-router.get("/", getAllProducts);
 
-module.exports = router;
+router.post('/',authMiddleware,createProduct,isAdmin)
+router.get('/:id',getaProduct)
+router.put('/wishlist',authMiddleware,AddtoWishlist)
+router.put('/rating',authMiddleware,rating)
+router.put('/:id',authMiddleware,updateProduct,isAdmin)
+router.delete('/:id',authMiddleware,deleteProduct,isAdmin)
+router.get('/',getAllProduct)
+
+module.exports=router
